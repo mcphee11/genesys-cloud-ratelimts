@@ -1,0 +1,23 @@
+{
+  "name": "genesys-cloud-ratelimts",
+  "version": "1.0.0",
+  "description": "Information on how to prevent rate limits in an enterprise IVR",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mcphee11/genesys-cloud-ratelimts.git"
+  },
+  "author": "matt mcphee",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mcphee11/genesys-cloud-ratelimts/issues"
+  },
+  "homepage": "https://github.com/mcphee11/genesys-cloud-ratelimts#readme",
+  "dependencies": {
+    "purecloud-platform-client-v2": "^119.0.0",
+    "sample-http": "0.0.1"
+  }
+}
