@@ -9,7 +9,7 @@ This Example Guide and repo is to give some ideas on how cacheing can be used wh
 
 There are a few ways to 'cache' this data, depending on your environement and the amount of data you want to cache. Another **GREAT** advantage of using cache is not just avoiding rate limts but also vast improvments in speed. Below are some of the way I have done this in the past:
 
-* Genesys Architect DataTables
+* Genesys Architect DataTables ['Details here'](https://developer.genesys.cloud/blog/2021-02-03-Caching-in-flows/#design-and-implement-a-data-action-response-cache)
 * AWS API Gateway
 * Google Apigee
 * Google Cloud Function (what we will cover in this project)
@@ -89,6 +89,6 @@ In reality the cache its self has a parent object that is the queueId, this is h
                                                 },
     }
 
-These additional parent objects in the JSON are not exposed to the respose JSON to keep the API simple and easy to consume from the Genesys Cloud Data Action side. This same concept can be used for other API requests to the Genesys Cloud APT endpoints or anyother API for that matter.
+These additional parent objects in the JSON are not exposed to the respose JSON to keep the API simple and easy to consume from the Genesys Cloud Data Action side. This same concept can be used for other API requests to the Genesys Cloud API endpoints or anyother API for that matter.
 
 Now you have a robust secure API endpoint to call inside Architect to get the EWT of a queue in your solution for EVERY interaction without having to worry about rate limiting at enterprise scale of over 300 requests per second.
