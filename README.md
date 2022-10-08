@@ -7,6 +7,13 @@ When building out a application its up to the builder of the code to do best pra
 
 This Example Guide and repo is to give some ideas on how cacheing can be used when triggering a [data action](https://help.mypurecloud.com/articles/about-the-data-actions-integrations/). The use case I will be going through will be when inside an [architect](https://help.mypurecloud.com/articles/about-architect/) 'call flow' you want to run a data action to call the internal Genesys Cloud API to 'GET' the EWT of a specifc queue before transfering it to the queue. While you can directly call this API endpoint if you run this data action more then 300 times in a minute you will get rate limited as per the documentation. While 300 per minute is fine for most small sites when dealing with enterprise call center loads this number can be exceeded.
 
+# NOTE:
+*There has now been an update to Genesys Cloud Arcitect where you can now call the*
+
+    FindQueueEstimatedWaitTime()
+
+*Directly as a funciton in the "Flow" removing the requirement to do it as a DataAction. I will still leave this as an example as the concept of the caching design still stands but for other use cases.*
+
 There are a few ways to 'cache' this data, depending on your environement and the amount of data you want to cache. Another **GREAT** advantage of using cache is not just avoiding rate limts but also vast improvments in speed. Below are some of the way I have done this in the past:
 
 * Genesys Architect DataTables ['Details here'](https://developer.genesys.cloud/blog/2021-02-03-Caching-in-flows/#design-and-implement-a-data-action-response-cache)
